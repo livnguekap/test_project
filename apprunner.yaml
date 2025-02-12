@@ -7,7 +7,7 @@ build:
       - pyenv global 3.11.0
     build:
       - pip3 install pipenv
-      - pipenv install
+      - pipenv install gunicorn
       - pipenv install -r requirements.txt
 run:
   command: |
