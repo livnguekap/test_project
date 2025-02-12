@@ -2,15 +2,11 @@ version: 1.0
 runtime: python311
 build:
   commands:
-    pre-build:
-      - pyenv install 3.11.0
-      - pyenv global 3.11.0
     build:
-      - pip3 install pipenv
+      - pip3 install django
       - pipenv install gunicorn
-      - pipenv install -r requirements.txt
 run:
   command: |
-    pipenv run gunicorn test_project.wsgi:application --log-file -
+    pip3 run gunicorn test_project.wsgi:application --log-file -
   network:
     port: 8000
