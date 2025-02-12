@@ -7,7 +7,6 @@ build:
       - pipenv install django
       - pipenv install gunicorn
       - pipenv run python manage.py migrate
-      - pipenv run python manage.py collectstatic --noinput
 run:
   command:
     pip3 run python manage.py runserver 0.0.0.0:8000
