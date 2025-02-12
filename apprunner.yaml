@@ -4,7 +4,7 @@ build:
   commands:
     build:
       - pip3 install django
-      - pipenv install gunicorn
+      - pip3 install gunicorn
 run:
   command: |
     pip3 run gunicorn test_project.wsgi:application --log-file -
