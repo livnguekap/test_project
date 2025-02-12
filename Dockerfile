@@ -14,11 +14,6 @@ ENV PYTHONUNBUFFERED=1
 # Upgrade pip
 RUN pip install --upgrade pip
 
-#copy Django project and install depencencies
-COPY requirements.txt /app/
-
-RUN pip install --no-cache-dir -r requirements.txt
-
 # Copy the current directory contents into the container at /app
 COPY . /app/
 
@@ -26,4 +21,4 @@ COPY . /app/
 EXPOSE 8000
 
 # Run the application with Gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "cake_project.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "test_project.wsgi:application"]
