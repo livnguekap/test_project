@@ -7,6 +7,6 @@ build:
       - pip3 install gunicorn
 run:
   command: |
-    pip3 run gunicorn test_project.wsgi:application --log-file -
+    pip3 run python manage.py runserver 0.0.0.0:8000
   network:
     port: 8000
