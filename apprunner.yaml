@@ -6,7 +6,6 @@ build:
       - pip3 install pipenv
       - pipenv install django
       - pipenv install gunicorn
-      - chmod +x startup.sh
 run:
   command:
     ./startup.sh
