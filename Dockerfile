@@ -1,12 +1,7 @@
 FROM python:3.11-slim
 
-# Create a system user and a directory, then set permissions
-RUN useradd -m -r appuser && \
-    mkdir /app && \
-    chown -R appuser /app
-
-# Switch to the new user
-USER appuser
+# Create app directory
+RUN mkdir /app
 
 # Set the working directory in the container
 WORKDIR /app
