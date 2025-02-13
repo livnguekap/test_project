@@ -8,8 +8,8 @@ build:
       - pipenv install gunicorn
       - chmod +x startup.sh
 run:
-  command:
-    ./app/startup.sh
+  command: >
+    /bin/sh -c "pip3 install pipenv && ./app/startup.sh"
 
   network:
     port: 8000
