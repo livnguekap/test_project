@@ -9,7 +9,7 @@ build:
       - chmod +x startup.sh
 run:
   command:
-    ./startup.sh
+    ./app/startup.sh
 
   network:
     port: 8000
