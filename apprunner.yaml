@@ -6,9 +6,9 @@ build:
       - pip3 install pipenv
       - pipenv install django
       - pipenv install gunicorn
-      - pipenv run python manage.py migrate
 run:
   command:
-    pip3 run python manage.py runserver 0.0.0.0:8000
+    - pipenv run python manage.py migrate
+    - pipenv run python manage.py runserver 0.0.0.0:8000
   network:
     port: 8000
