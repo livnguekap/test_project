@@ -19,9 +19,6 @@ RUN pip list
 # Copy the current directory contents into the container at /app
 COPY . /app/
 
-# Make the start.sh script executable
-RUN chmod +x startup.sh
-
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
 
