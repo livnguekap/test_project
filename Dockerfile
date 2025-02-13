@@ -23,4 +23,4 @@ COPY . /app/
 EXPOSE 8000
 
 # Run the application with the startup.sh script
-CMD ["./startup.sh"]
+#CMD ["./startup.sh"]
