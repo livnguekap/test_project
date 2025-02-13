@@ -14,6 +14,9 @@ ENV PYTHONUNBUFFERED=1
 # Upgrade pip
 RUN pip install --upgrade pip
 
+# Make the start.sh script executable
+RUN chmod +x start.sh
+
 # Copy the current directory contents into the container at /app
 COPY . /app/
 
