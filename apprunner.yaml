@@ -1,14 +1,11 @@
 version: 1.0
-runtime: python3
+runtime: python311
 build:
   commands:
     build:
-      - pip install pipenv
+      - pip3 install pipenv
       - pipenv install
       - pipenv install gunicorn
 
 run:
   command: pipenv run manage.py runserver 0.0.0.0:8000
-
-network:
-  port: 8000
