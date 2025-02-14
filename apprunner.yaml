@@ -2,9 +2,11 @@ version: 1.0
 runtime: python311
 build:
   commands:
-    - pip3 install pipenv
-    - pipenv install django
-    - pipenv install gunicorn
+    build:
+      - pip3 install pipenv
+      - pipenv install
+      - pipenv install django
+      - pipenv install gunicorn
 
 run:
   commands:
