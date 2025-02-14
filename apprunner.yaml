@@ -3,11 +3,13 @@ runtime: python311
 build:
   commands:
     build:
-      - pip3 install pipenv
-      - pipenv install
-      - pipenv install gunicorn
+      -pip3 install django
 
 run:
+  pre-run:
+    - pip3 install pipenv
+    - pipenv install
+    - pipenv install gunicorn
   command: pipenv run gunicorn test_project.wsgi --log-file -
   network:
     port: 8000
