@@ -9,6 +9,7 @@ run:
   pre-run:
     - pip3 install pipenv
     - pipenv install
+    - pipenv install django
     - pipenv install gunicorn
   command: pipenv run gunicorn test_project.wsgi --log-file -
   network:
