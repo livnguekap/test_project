@@ -9,12 +9,9 @@ WORKDIR /app
 # Define environment variables
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
-ENV PATH="/root/.local/bin:$PATH"
 
 # Upgrade pip and install pipenv
 RUN pip install --upgrade pip pipenv
-
-RUN pip list
 
 # Copy the current directory contents into the container at /app
 COPY . /app/

@@ -2,17 +2,13 @@ version: 1.0
 runtime: python311
 build:
   commands:
-    pre_build:
       - pip3 install pipenv
-    build:
       - pipenv install django
       - pipenv install gunicorn
 
 run:
   commands:
-    pre_run:
       - python manage.py migrate
-    run:
       - python manage.py runserver 0.0.0.0:8000
 
 network:
