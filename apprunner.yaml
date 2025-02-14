@@ -1,7 +1,8 @@
 version: 1.0
 runtime: python311
 build:
-  command: pip3 install pipenv
+  commands:
+    - pip3 install pipenv
 
 run:
   command: pipenv run gunicorn test_project.wsgi --log-file -
