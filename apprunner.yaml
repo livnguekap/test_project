@@ -2,10 +2,11 @@ version: 1.0
 runtime: python311
 build:
   commands:
-    build:
-      - pip3 install pipenv
-      - pipenv install
-      - pipenv install gunicorn
+    - pip3 install pipenv
+    - pipenv install
+    - pipenv install gunicorn
 
 run:
-  command: pipenv run manage.py runserver 0.0.0.0:8000
+  commands:
+    - pipenv run python manage.py migrate
+    - pipenv run python manage.py runserver 0.0.0.0:8000
