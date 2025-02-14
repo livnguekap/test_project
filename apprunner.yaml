@@ -3,7 +3,7 @@ runtime: python311
 build:
   command:
     build:
-      - pip3 install django
+    - pip install django
 run:
   command:
     - python manage.py migrate
