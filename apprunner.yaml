@@ -3,9 +3,7 @@ runtime: python311
 build:
   commands:
     build:
-      - pip3 install pipenv
-      - pipenv install django
-      - pipenv install gunicorn
+      - pip3 install django
 run:
   commands:
     - python manage.py migrate
