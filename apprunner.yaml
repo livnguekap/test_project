@@ -7,4 +7,4 @@ build:
     - pipenv install gunicorn
 
 run:
-  commands: pipenv run gunicorn test_project.wsgi --log-file -
+  command: pipenv run gunicorn test_project.wsgi --log-file -
