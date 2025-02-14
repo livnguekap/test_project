@@ -1,11 +1,11 @@
 version: 1.0
 runtime: python311
 build:
-  commands:
+  command:
     build:
       - pip3 install django
 run:
-  commands:
+  command:
     - python manage.py migrate
     - python manage.py runserver 0.0.0.0:8000"
   network:
