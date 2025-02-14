@@ -3,7 +3,7 @@ runtime: python311
 build:
   commands:
     build:
-      -pip3 install django
+      - pip3 install django
 
 run:
   pre-run:
